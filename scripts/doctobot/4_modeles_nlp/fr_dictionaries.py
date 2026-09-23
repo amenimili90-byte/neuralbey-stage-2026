@@ -1,0 +1,138 @@
+# -*- coding: utf-8 -*-
+"""
+Dictionnaires de correspondance anglais -> français pour les valeurs
+structurées `species` et `symptoms` du dataset unifié.
+
+Ces dictionnaires servent à repérer, dans le texte TRADUIT en français,
+l'endroit où l'espèce et les symptômes apparaissent (même logique que
+find_span() dans prepare_ner_data.py, mais avec le terme français).
+
+Si une valeur du dataset n'a pas de traduction ici, elle est simplement
+ignorée lors de l'étiquetage de la version française (mieux vaut manquer
+une entité que d'insérer une mauvaise traduction).
+
+Pour étendre ces dictionnaires, lancez check_symptom_coverage.py qui liste
+les valeurs les plus fréquentes du dataset qui manquent encore.
+"""
+
+SPECIES_FR = {
+    "dog": "chien",
+    "cat": "chat",
+    "cow": "vache",
+    "horse": "cheval",
+    "rabbit": "lapin",
+    "bird": "oiseau",
+    "hamster": "hamster",
+    "goat": "chèvre",
+    "sheep": "mouton",
+    "pig": "cochon",
+    "ferret": "furet",
+    "guinea pig": "cochon d'inde",
+    "guinea_pig": "cochon d'inde",
+    "reptile": "reptile",
+    "parrot": "perroquet",
+    "snake": "serpent",
+    "turtle": "tortue",
+    "fish": "poisson",
+    "chicken": "poule",
+    "duck": "canard",
+    "puppy": "chiot",
+    "kitten": "chaton",
+    "calf": "veau",
+}
+
+# Symptômes les plus fréquents observés dans les données (Phase 2). Cette
+# liste n'est pas exhaustive : lancez check_symptom_coverage.py pour voir
+# ce qu'il manque et complétez au besoin.
+SYMPTOMS_FR = {
+    "vomiting": "vomissements",
+    "vomit": "vomissements",
+    "diarrhea": "diarrhée",
+    "fever": "fièvre",
+    "coughing": "toux",
+    "cough": "toux",
+    "sneezing": "éternuements",
+    "lethargy": "léthargie",
+    "loss of appetite": "perte d'appétit",
+    "appetite loss": "perte d'appétit",
+    "difficulty breathing": "difficulté à respirer",
+    "breathing difficulty": "difficulté à respirer",
+    "nasal discharge": "écoulement nasal",
+    "eye discharge": "écoulement oculaire",
+    "discharge from eyes": "écoulement oculaire",
+    "itching": "démangeaisons",
+    "scratching": "grattage",
+    "skin irritation": "irritation de la peau",
+    "hair loss": "perte de poils",
+    "weight loss": "perte de poids",
+    "limping": "boiterie",
+    "lameness": "boiterie",
+    "seizures": "crises convulsives",
+    "bloating": "ballonnement",
+    "swelling": "gonflement",
+    "pain": "douleur",
+    "tremors": "tremblements",
+    "aggression": "agressivité",
+    "restlessness": "agitation",
+    "dehydration": "déshydratation",
+    "excessive thirst": "soif excessive",
+    "increased thirst": "soif excessive",
+    "lack of energy": "manque d'énergie",
+    "tiredness": "fatigue",
+    "fatigue": "fatigue",
+    "swollen abdomen": "abdomen gonflé",
+    "loss of balance": "perte d'équilibre",
+    "difficulty walking": "difficulté à marcher",
+    "excessive drooling": "salivation excessive",
+    "drooling": "salivation",
+    "pale gums": "gencives pâles",
+    "bad breath": "mauvaise haleine",
+    "ear discharge": "écoulement auriculaire",
+    "shaking head": "secoue la tête",
+    "constipation": "constipation",
+    "blood in stool": "sang dans les selles",
+    "blood in urine": "sang dans les urines",
+    "difficulty urinating": "difficulté à uriner",
+    "excessive scratching": "grattage excessif",
+    "hives": "urticaire",
+    "rash": "éruption cutanée",
+    "swollen joints": "articulations gonflées",
+    "stiffness": "raideur",
+    "wheezing": "respiration sifflante",
+    "runny nose": "nez qui coule",
+    "watery eyes": "yeux larmoyants",
+    "not eating": "ne mange pas",
+    "not drinking": "ne boit pas",
+    "hiding": "se cache",
+    "excessive sleeping": "dort excessivement",
+    "fleas": "puces",
+    "ticks": "tiques",
+    "worms": "vers",
+
+    # --- Ajoutés après audit check_symptom_coverage.py (termes fréquents manquants) ---
+    "gingivitis": "gingivite",
+    "infection": "infection",
+    "infected": "infecté",
+    "erythema": "érythème",
+    "conjunctivitis": "conjonctivite",
+    "allergy": "allergie",
+    "allergies": "allergies",
+    "osteoarthritis": "arthrose",
+    "ulcer": "ulcère",
+    "otitis externa": "otite externe",
+    "otitis": "otite",
+    "dental disease": "maladie dentaire",
+    "lipoma": "lipome",
+    "foreign body": "corps étranger",
+    "cystitis": "cystite",
+    "abscess": "abcès",
+    "alopecia": "alopécie",
+    "wound": "plaie",
+    "pruritus": "prurit",
+    "pruritis": "prurit",
+    "pyoderma": "pyodermite",
+    "arthritis": "arthrite",
+    "kennel cough": "toux de chenil",
+    "cyst": "kyste",
+    "neoplasia": "néoplasie",
+}

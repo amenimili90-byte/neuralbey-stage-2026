@@ -1,0 +1,15 @@
+accelerate>=0.30.0
+datasets>=2.19.0
+evaluate>=0.4.0
+huggingface_hub>=0.23.0
+pandas>=2.0.0
+pypdf>=4.0.0
+qdrant-client>=1.9.0
+sacremoses>=0.0.53
+scikit-learn>=1.4.0
+sentence-transformers>=2.7.0
+sentencepiece>=0.1.99
+seqeval>=1.2.2
+torch>=2.0.0
+torch>=2.2.0
+transformers>=4.40.0

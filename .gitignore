@@ -1,0 +1,38 @@
+# AI MODELS
+models/
+
+# DATASETS
+raw/
+processed/
+
+# VECTOR DATABASE
+qdrant_data/
+
+# ARCHIVES
+archive/
+
+# PYTHON
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+
+# JUPYTER
+.ipynb_checkpoints/
+
+# SECRETS
+.env
+.env.*
+
+# LOGS
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+.DS_Store
